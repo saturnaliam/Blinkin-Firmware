@@ -309,37 +309,37 @@ void displaySolid( CRGB rgb)
 
 void toggleStripSelect()
 {
-  cmdDisableOutput = false;
-  if (addressableStrip)
-  {
-    Black();
-    FastLED.show();
-    digitalWrite(IND_PIN, HIGH);
-    addressableStrip = false;
+  // cmdDisableOutput = false;
+  // if (addressableStrip)
+  // {
+  //   Black();
+  //   FastLED.show();
+  //   digitalWrite(IND_PIN, HIGH);
+  //   addressableStrip = false;
 
-    //EEPROM write takes 3.3ms
-    if(writeEEPROM)
-        EEPROM.write(SS_EE, addressableStrip);
-  }
-  else
-  {
-    Black();
-    digitalWrite(IND_PIN, LOW);
-    addressableStrip = true;
+  //   //EEPROM write takes 3.3ms
+  //   if(writeEEPROM)
+  //       EEPROM.write(SS_EE, addressableStrip);
+  // }
+  // else
+  // {
+  //   Black();
+  //   digitalWrite(IND_PIN, LOW);
+  //   addressableStrip = true;
 
-    //EEPROM write takes 3.3ms
-    if(writeEEPROM)
-      EEPROM.write(SS_EE, addressableStrip);
-  }
+  //   //EEPROM write takes 3.3ms
+  //   if(writeEEPROM)
+  //     EEPROM.write(SS_EE, addressableStrip);
+  // }
 
 }
 
 
 void setStripSelect(bool newStripState)
 {
-  cmdDisableOutput = false;
-  if (newStripState != addressableStrip)
-    toggleStripSelect();
+  // cmdDisableOutput = false;
+  // if (newStripState != addressableStrip)
+  //   toggleStripSelect();
 }
 
 
