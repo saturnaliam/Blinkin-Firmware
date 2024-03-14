@@ -59,16 +59,9 @@ void setup() {
   //LOW for 5V, HIGH for 12V
   pinMode(IND_PIN, OUTPUT);
 
-  if (addressableStrip == true) {
-    digitalWrite(IND_PIN, LOW);
-    fill_solid( leds, NUM_LEDS, CRGB::Black );
-    FastLED.show();
-  }
-  else {
-    digitalWrite(IND_PIN, HIGH);
-    fill_solid( leds, NUM_LEDS, CRGB::Black );
-    FastLED.show();
-  }
+  digitalWrite(IND_PIN, HIGH);
+  fill_solid( leds, NUM_LEDS, CRGB::Black );
+  FastLED.show();
 
   //FastLED.setMaxRefreshRate(200, true);
 
